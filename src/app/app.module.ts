@@ -12,10 +12,16 @@ import {
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { PostCreateComponent } from "./posts/post-create/post-create.component";
+import { PostListComponent } from "./posts/post-list/post-list.component";
 import { HeaderComponent } from "./header/header.component";
 
 @NgModule({
-  declarations: [AppComponent, PostCreateComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    PostCreateComponent,
+    PostListComponent,
+    HeaderComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
