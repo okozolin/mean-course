@@ -1,7 +1,8 @@
 <mat-card>
   <form (submit)="onAddPost(postForm)" #postForm="ngForm">
     <mat-form-field>
-      <input matInput type="text" name="title" ngModel required minlength="3"/>
+      <input matInput type="text" name="title" ngModel required minlength="3" />
+      <mat-error *ngIf="postForm.getControl('title').invalid">{{}}</mat-error>
     </mat-form-field>
     <mat-form-field>
       <textarea matInput rows="4" name="content ngModel" required></textarea>
