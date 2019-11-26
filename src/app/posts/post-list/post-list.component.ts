@@ -1,6 +1,6 @@
 import { Component, Input } from "@angular/core";
-import { Post } from "./posts/post.model";
-import { PostsService } from "./posts/post.service";
+import { Post } from "./post.model";
+import { PostsService } from "./posts.service";
 
 @Component({
   selector: "app-post-list",
@@ -15,5 +15,5 @@ export class PostListComponent {
   // ];
   @Input() myposts: Post[] = [];
 
-  constructor(postService: PostService) {}
+  constructor(public postService: PostsService) {}
 }
