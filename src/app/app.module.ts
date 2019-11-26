@@ -6,7 +6,8 @@ import {
   MatInputModule,
   MatCardModule,
   MatButtonModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatExpansionModule
 } from "@angular/material";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -30,7 +31,8 @@ import { HeaderComponent } from "./header/header.component";
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
