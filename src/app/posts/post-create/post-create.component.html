@@ -1,5 +1,9 @@
 <h2>My first component</h2>
-<textarea rows="6" [(ngModel)]="enteredValue"></textarea>
+<mat-card>
+  <mat-form-field>
+    <textarea matInput rows="6" [(ngModel)]="enteredValue"></textarea>
+  </mat-form-field>
+</mat-card>
 <hr />
-<button (click)="onAddPost(postInput)">Save post</button>
+<button (click)="onAddPost()">Save post</button>
 <p>{{ newPost }}</p>
