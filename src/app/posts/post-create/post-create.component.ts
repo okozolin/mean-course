@@ -8,7 +8,8 @@ export class PostCreateComponent {
   enteredTitle = "";
   enteredContent = "";
   @Output() postCreated = new EventEmitter();
-  onAddPost(postInput: HTMLAreaElement) {
+
+  onAddPost() {
     const post = {
       title: this.enteredTitle,
       content: this.enteredContent
