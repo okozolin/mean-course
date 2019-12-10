@@ -1,6 +1,6 @@
 import { Component, Input } from "@angular/core";
-import { Post } from "./post.model";
-import { PostsService } from "./posts.service";
+import { Post } from "../post.model";
+import { PostsService } from "../posts.service";
 
 @Component({
   selector: "app-post-list",
@@ -14,6 +14,10 @@ export class PostListComponent {
   //   { title: "Third Post", content: "This is the third post's content" }
   // ];
   @Input() myposts: Post[] = [];
+  postsService: PostsService; // to store the instance of the service created on this class
 
-  constructor(public postService: PostsService) {}
+  // dependency injection - injecting the service
+  constructor(postService: PostsService) {
+    this.postsService = postService;
+  }
 }
