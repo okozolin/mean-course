@@ -14,10 +14,8 @@ export class PostListComponent {
   //   { title: "Third Post", content: "This is the third post's content" }
   // ];
   @Input() myposts: Post[] = [];
-  postsService: PostsService; // to store the instance of the service created on this class
 
-  // dependency injection - injecting the service
-  constructor(postService: PostsService) {
-    this.postsService = postService;
-  }
+  // dependency injection - injecting the service -
+  // adding 'public' will automaticly create the variable 'postService' on the class
+  constructor(public postService: PostsService) {}
 }
