@@ -18,8 +18,8 @@ export class PostListComponent implements OnInit {
   // dependency injection - injecting the service -
   // adding 'public' will automaticly create the variable 'postService' on the class
   // and save the instance created by the constructor there. it is typescript feature
-  constructor(public postService: PostsService) {}
+  constructor(public postsService: PostsService) {}
   ngOnInit() {
-    this.posts = this.postsService.getPosts();
+    this.myposts = this.postsService.getPosts();
   }
 }
