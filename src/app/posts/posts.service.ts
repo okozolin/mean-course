@@ -12,6 +12,9 @@ export class PostsService {
     return [...this.posts]; // this would make the original array immutable
   }
 
+  getPostUpdatedListener() {
+    return this.postsUpdated.asObservable();
+  }
   addPost(title: string, content: string) {
     const post: Post = { title, content }; // es6 shorthand for {title: title, content: content}
     this.posts.push(post);
