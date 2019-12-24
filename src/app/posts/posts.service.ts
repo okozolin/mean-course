@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core";
 import { Post } from "./post.model";
 
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class PostsService {
   private posts: Post[] = [];
 
   getPosts() {
-    return [...this.posts]; // this would make the original array immutable
+    return this.posts; // not the cleanest solution but works
   }
 
   addPost(title: string, content: string) {

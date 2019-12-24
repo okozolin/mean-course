@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Post } from "../post.model";
 import { PostsService } from "../posts.service";
 
@@ -13,7 +13,7 @@ export class PostListComponent implements OnInit {
   //   { title: "Second Post", content: "This is the second post's content" },
   //   { title: "Third Post", content: "This is the third post's content" }
   // ];
-  @Input() myposts: Post[] = [];
+  myposts: Post[] = [];
 
   // dependency injection - injecting the service -
   // adding 'public' will automaticly create the variable 'postService' on the class
